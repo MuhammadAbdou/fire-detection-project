@@ -13,6 +13,7 @@ This project implements a Convolutional Neural Network (CNN) to detect fire in i
 
 Dataset used: [Fire Detection Dataset]
 Each folder contains sample images used for training and testing the model.
+Kaggel link "https://www.kaggle.com/datasets/metinmekiabullrahman/fire-detection"
 
 ## 🚀 How to Run
 
