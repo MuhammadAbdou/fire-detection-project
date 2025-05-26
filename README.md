@@ -1,23 +1,34 @@
-# 🔥 Fire Detection Using CNN
+# 🔥 Fire Detection Using Transfer Learning (MobileNetV2)
 
-This project implements a Convolutional Neural Network (CNN) to detect fire in images. The model is trained on a dataset containing images with and without fire, aiming to accurately classify them.
+This project uses **Transfer Learning** with a pre-trained **MobileNetV2** model to detect fire in images. It classifies input images as either "Fire" or "No Fire" with the help of custom top layers and a well-preprocessed dataset.
 
-## 🧠 Model
+---
 
-- **Model type**: CNN (Convolutional Neural Network)
+## 🧠 Model Overview
+
+- **Base Model**: MobileNetV2 (pre-trained on ImageNet)
+- **Custom Layers**:
+  - GlobalAveragePooling2D
+  - Dense + Dropout Layers
+  - Softmax Output Layer (2 classes)
 - **Framework**: TensorFlow / Keras
-- **Input**: Images (fire / non-fire)
-- **Output**: Binary classification
+- **Loss Function**: Categorical Crossentropy
+- **Optimizer**: Adam
+
+---
 
 ## 📦 Dataset
 
-Dataset used: [Fire Detection Dataset]
-Each folder contains sample images used for training and testing the model.
-Kaggel link "https://www.kaggle.com/datasets/metinmekiabullrahman/fire-detection"
+- **Source**: [Fire Detection Dataset on Kaggle](https://www.kaggle.com/datasets/metinmekiabullrahman/fire-detection)
+- **Structure**:
+  - `Fire/` – Images containing fire
+  - `NoFire/` – Images without fire
+- Images are resized to 224x224 for model input.
+
+---
 
 ## 🚀 How to Run
 
-1. Install required packages:
-```bash
-pip install -r requirements.txt
-
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
