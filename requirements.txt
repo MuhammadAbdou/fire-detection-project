@@ -1,0 +1,10 @@
+tensorflow
+numpy
+matplotlib
+seaborn
+opencv-python
+scikit-learn
+
+optional:
+
+pygame
